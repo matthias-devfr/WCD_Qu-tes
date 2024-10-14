@@ -1,0 +1,17 @@
+Moi : = Mardi matin = Etapes d'installation & Config Keepass
+        Mercrerdi matin = Utilisation avancée de keepass
+
+
+Anthony : = FAQ
+            Installation & Config Client 1
+
+
+P.A :
+    mardi soir = Installation du serveur & config VM
+                 Config dossier partagé
+                 Tableau difficulté/solution
+
+
+Sam :
+    Mardi matin = Etape d'installation client 2
+    Mercredi soir = Utilisation de base de Keepass
