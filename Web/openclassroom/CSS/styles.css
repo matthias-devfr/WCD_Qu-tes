@@ -1,0 +1,37 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+label {
+  font-size: 2rem;
+}
+label:hover {
+  font-size: 3rem;
+}
+
+.container {
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 250, 255);
+}
+
+.form__group input {
+  border: 2px solid #ffcbcb;
+  border-radius: 100rem;
+  color: #9d00ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+}
+.form__group input:hover {
+  background-color: #ff8888;
+}
+.form__group input:focus {
+  border: 2px solid #9d00ff;
+}/*# sourceMappingURL=styles.css.map */

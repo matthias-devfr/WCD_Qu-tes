@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="formulaire.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire complet</title>
+  </head>
+  <body>
+    <header>
+      <h2>Formulaire de Contact</h2>
+    </header>
+    <section class="section-form">
+      <form
+        action="/traitement-formulaire"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <legend><h2>Formulaire d'envoi</h2></legend>
+
+        <!-- Champ de texte -->
+        <div class="nom" id="required">
+          <label for="nom">Nom :</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Votre nom"
+            required
+          />
+        </div>
+        <br />
+
+        <!-- Champ d'email -->
+        <div class="mail" id="required">
+          <label for="email">Email :</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="mail@exemple.com"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            required
+          />
+        </div>
+        <br />
+
+        <!-- Champ de mot de passe -->
+        <div class="password" id="required">
+          <label for="motDePasse">Mot de passe :</label>
+          <input
+            type="password"
+            minlength="8"
+            maxlength="20"
+            id="motDePasse"
+            name="motDePasse"
+            placeholder="(entre 8 et 20 caractères)"
+            required
+          />
+        </div>
+        <br />
+
+        <!-- Champ de sélection (liste déroulante) -->
+        <div class="option" id="required">
+          <label for="pays">Pays :</label>
+          <select id="pays" name="pays" required>
+            <option value="" disabled selected hidden>
+              Sélectionnez un pays
+            </option>
+            <option value="france">France</option>
+            <option value="canada">Canada</option>
+            <option value="usa">États-Unis</option>
+          </select>
+        </div>
+        <br />
+
+        <!-- Bouton radio -->
+        <div class="radio" id="required">
+          <label class="genre" required>Genre :</label>
+          <label for="genreHomme">Homme</label>
+          <input type="radio" id="genreHomme" name="genre" value="homme" />
+          <label for="genreFemme">Femme</label>
+          <input type="radio" id="genreFemme" name="genre" value="femme" />
+        </div>
+        <br />
+
+        <!-- Cases à cocher -->
+        <div class="checkbox">
+          <label>Intérêts :</label>
+          <label for="interetSport">Sport</label>
+          <input
+            type="checkbox"
+            id="interetSport"
+            name="interets[]"
+            value="sport"
+          />
+          <label for="interetMusique">Musique</label>
+          <input
+            type="checkbox"
+            id="interetMusique"
+            name="interets[]"
+            value="musique"
+          />
+          <label for="interetVoyage">Voyage</label>
+          <input
+            type="checkbox"
+            id="interetVoyage"
+            name="interets[]"
+            value="voyage"
+          />
+        </div>
+        <br />
+
+        <!-- Champ de téléchargement de fichier -->
+        <div class="file">
+          <label for="cv">CV (PDF) :</label>
+          <input type="file" id="cv" name="cv" accept=".pdf" />
+        </div>
+        <br />
+
+        <!-- Champ de texte multiligne -->
+        <div>
+          <p>
+            <label for="message">Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="40"
+              placeholder="Si vous avez un commentaire à nous transmettre ..."
+            ></textarea>
+          </p>
+        </div>
+        <br />
+
+        <!-- Bouton de soumission -->
+        <button class="bouton" type="submit">Envoyer</button>
+      </form>
+    </section>
+    <footer>
+      <h3>Merci de votre visite ! A bientôt.</h3>
+    </footer>
+  </body>
+</html>

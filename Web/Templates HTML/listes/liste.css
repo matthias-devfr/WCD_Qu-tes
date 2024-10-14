@@ -1,0 +1,42 @@
+body {
+ font-family: Arial;
+ margin: 0;
+ padding: 0px 5px;
+ background: linear-gradient(to bottom, #3aa7ef, #6dc5ff)
+}
+
+header {
+ background-color: #2291da;
+ color: white;
+ text-align: center;
+ padding: 20px;
+}
+
+main {
+ max-width: 800px;
+ margin: 20px auto;
+}
+
+.liste {
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ margin-bottom: 20px;
+ padding: 20px;
+}
+
+.liste h2 {
+ color: #277bb4;
+ text-decoration: underline;
+}
+
+ul,
+ol {
+ padding-left: 20px;
+}
+
+li {
+ margin-bottom: 8px;
+}
+
+/* Ajoutez d'autres styles selon vos préférences */

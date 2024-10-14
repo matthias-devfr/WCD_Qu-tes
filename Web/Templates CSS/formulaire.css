@@ -1,0 +1,149 @@
+body {
+ margin: 0;
+ padding: 0;
+ background: linear-gradient(to top, #1721788f, #0a1258);
+}
+
+header,
+footer {
+ background-color: #0a1258;
+ color: white;
+ text-align: center;
+ padding: 6px;
+}
+
+.section-form {
+ max-width: 600px;
+ margin: 0 auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ background: linear-gradient(to bottom, white, #0a1258);
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+}
+
+footer {
+ text-align: center;
+ border-top: 1.5px solid rgb(48, 48, 48);
+ margin-top: 10px;
+}
+
+legend {
+ font-size: 1.5em;
+ margin-bottom: 5px;
+}
+
+label {
+ margin-bottom: 5px;
+ margin-right: 5px;
+ display: inline-block;
+ padding-top: 15px;
+}
+
+input,
+textarea {
+ padding: 8px;
+ margin-bottom: 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
+
+/*pour aligner les boutons radio */
+.radio input[type="radio"] {
+ vertical-align: middle;
+ /* Ajoutez un espacement entre les boutons si nécessaire */
+ margin-right: 30px;
+ margin-left: 0;
+}
+
+/*champs requis non remplis avec input" */
+#required input:invalid {
+ border: 1px solid red;
+ background-color: rgba(255, 0, 0, 0.3);
+}
+
+#required input:invalid+label:after {
+ content: ' * (Champ requis)';
+ color: red;
+ display: inline;
+}
+
+/*champs requis non remplis avec select" */
+#required select:invalid {
+ border: 1px solid red;
+ background-color: rgba(255, 0, 0, 0.3);
+}
+
+#required select:invalid+label:after {
+ content: ' * (Champ requis)';
+ color: red;
+ display: inline;
+}
+
+input:hover,
+textarea:hover {
+ border: 1px solid #999;
+ background: hsla(0, 0%, 60%, 0.5);
+ transition: background-color 0.3s ease;
+}
+
+button {
+ margin-top: 10px;
+ background-color: #4caf50;
+ color: white;
+ padding: 10px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ width: 50%;
+ margin: 0 auto;
+}
+
+button:hover {
+ background-color: #45a049;
+ transition: background-color 0.3s ease;
+}
+
+/* Responsive */
+
+/* grands écrans */
+@media screen and (min-width: 1025px) {
+ .section-form {
+  max-width: 50%;
+ }
+}
+
+/* Moyen écrans */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+ .section-form {
+  max-width: 80%;
+ }
+}
+
+@media screen and (max-width: 450px) {
+ .section-form {
+  max-width: 100%;
+  padding: 10px;
+ }
+
+ label {
+  display: block;
+  margin-bottom: 8px;
+ }
+
+ input,
+ textarea,
+ select {
+  width: 100%;
+  box-sizing: border-box;
+ }
+
+ button {
+  width: 100%;
+  margin: 10px 0;
+ }
+}
