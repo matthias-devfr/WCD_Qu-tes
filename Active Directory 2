@@ -1,1 +1,39 @@
+# Création d'une `OU`, d'un groupe, et d'un Utilisateur dans Active Directory
 
+## Prérequis
+- Un domaine Active Directory configuré : **wilders.lan**
+- Connecté en tant qu'administrateur du domaine sur Windows Server 2022.
+
+## Étape 1 : Créer une Unité d'Organisation (OU)
+
+1. **Ouvrir la console Active Directory Users and Computers** :
+
+2. **Créer l'OU** :
+   - Faites un clic droit sur le nom du domaine (**wilders.lan**) > **New** > **Organizational Unit**.
+   - Entrez **Wilders_students** comme nom, puis cliquez sur **OK**.
+
+## Étape 2 : Créer un Groupe d'Utilisateurs
+
+1. **Naviguer dans l'OU Wilders_students** :
+   - Développez **wilders.lan** dans la console, puis sélectionnez **Wilders_students**.
+
+2. **Créer le groupe** :
+   - Faites un clic droit sur **Wilders_students** > **New** > **Group**.
+   - Nommez le groupe **Students** puis cliquez sur **OK**.
+
+## Étape 3 : Créer un Utilisateur dans le Groupe
+
+1. **Créer un nouvel utilisateur** :
+   - Faites un clic droit sur **Wilders_students** > **New** > **User**.
+   - Renseignez les informations :
+     - **First name** : toto
+     - **Last name** : titi
+     - **User logon name** : toto titi
+
+2. **Configurer le mot de passe** :
+   - Entrez un mot de passe sécurisé.
+   - Cliquez sur **Next**, puis **Finish**.
+
+3. **Ajouter l'utilisateur au groupe** :
+   - Faites un clic droit sur **toto titi** > **Add to a group**.
+   - Tapez **Students**, cliquez sur **Check Names**, puis **OK**.
