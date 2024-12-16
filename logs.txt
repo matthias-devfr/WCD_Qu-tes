@@ -1,0 +1,18 @@
+j'ai préalablement créé un lien symbolique entre mes fichiers de log "LogAccess" /var/log/apache2/accesss.log et "LogError" /var/log/apache2/error.log
+
+cat LogAccess
+10.0.10.20 - - [16/Dec/2024:10:57:51 +0100] "GET / HTTP/1.1" 200 3460 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:10:57:52 +0100] "GET /icons/ubuntu-logo.png HTTP/1.1" 200 3607 "http://10.0.10.20/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:10:57:52 +0100] "GET /favicon.ico HTTP/1.1" 404 488 "http://10.0.10.20/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:11:02:50 +0100] "GET / HTTP/1.1" 200 3460 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:11:02:50 +0100] "GET /icons/ubuntu-logo.png HTTP/1.1" 200 3607 "http://10.0.10.20/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:11:05:44 +0100] "GET /manual HTTP/1.1" 404 489 "http://10.0.10.20/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+10.0.10.20 - - [16/Dec/2024:11:06:29 +0100] "GET /admin HTTP/1.1" 404 489 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0"
+# Analyse des logs
+Adresse IP de l'utilisateur - Timestamp - Méthode HTTP - chemin de la ressource demandée - version du protocole HTTP - Code de statut HTTP - Taille de la réponse en octets - le navigateur et le système d'exploitation du client
+
+cat LogError
+[Mon Dec 16 10:56:53.796180 2024] [mpm_event:notice] [pid 3997:tid 126847818286976] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Mon Dec 16 10:56:53.796455 2024] [core:notice] [pid 3997:tid 126847818286976] AH00094: Command line: '/usr/sbin/apache2'
+# Analyse des logs
+Timestamp - Module Apache et niveau de log - PID et TID - Code d'erreur Apache - Message d'information ou ligne de commande
